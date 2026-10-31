@@ -1,6 +1,8 @@
 import { useMembershipContext } from "../../context/MemberContext";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
+
 
 const JoinServerButton = () => {
   const { serverId } = useParams();
@@ -38,11 +40,14 @@ const JoinServerButton = () => {
 
   return (
     <>
-      ismember: {isUserMember.toString()}
       {isUserMember ? (
-        <button onClick={handleLeaveServer}>Leave Server</button>
+        <Button variant="outlined" size="small" onClick={handleLeaveServer}>
+          Leave Server
+        </Button>
       ) : (
-        <button onClick={handleJoinServer}>Join Server</button>
+        <Button variant="contained" size="small" disableElevation onClick={handleJoinServer}>
+          Join Server
+        </Button>
       )}
     </>
   );

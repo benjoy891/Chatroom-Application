@@ -1,7 +1,15 @@
 import { useFormik } from "formik";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link as RouterLink } from "react-router-dom";
 import { useAuthServiceContext } from "../context/AuthContext";
-import { Box, Button, Container, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Link,
+  TextField,
+  Typography,
+} from "@mui/material";
+
 
 const Register = () => {
   const { register } = useAuthServiceContext();
@@ -92,6 +100,12 @@ const Register = () => {
           >
             Next
           </Button>
+          <Typography variant="body2" sx={{ mb: 2 }}>
+            Already have an account?{" "}
+            <Link component={RouterLink} to="/login">
+              Sign in
+            </Link>
+          </Typography>
         </Box>
       </Box>
     </Container>
