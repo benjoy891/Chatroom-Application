@@ -123,7 +123,3 @@ Keep secrets out of version control. Settings such as the Django `SECRET_KEY`, d
 - File and image sharing in channels
 - Automated tests and CI
 - Docker setup for one-command startup
-
-## License
-
-No license has been specified yet. Add a `LICENSE` file if you want to make the terms of use explicit.
